@@ -3,7 +3,7 @@
 it appears to work: see finding_noisepollution. 
 
 ## todo
-- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models.
+- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. https://huggingface.co/shibing624/text2vec-base-chinese 
 - read and highlight the actual pdf and see if the model gets it right
 - count the total number of words after converting and check how many was lost.
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
