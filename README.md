@@ -1,5 +1,7 @@
 # Wind_project
 
+This is the main one: https://github.com/Jasper-Hewitt/Wind_project/blob/main/similarity_shibing624.ipynb. It appears to be working pretty well
+
 There's also one that uses distilbert: but it doesn't show a score. 
 
 it also works with entire paragraphs. However it makes one crucial mistake because it assigns 0.000 overall similarity score to a sentence that contains all the keywords. Maybe this is just because of a mistake in teh calculation part. Have to verify that
