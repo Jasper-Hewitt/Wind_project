@@ -7,10 +7,17 @@ I'm currently testing the code on 16 pages that I dragged from the original pdf.
 it appears to work: see finding_noisepollution. 
 
 ## todo
-- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. https://huggingface.co/shibing624/text2vec-base-chinese 
+
 - read and highlight the actual pdf and see if the model gets it right
-- count the total number of words after converting and check how many was lost.
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
+- determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
+
+### done 
+
+- count the total number of words after converting and check how many was lost.
+    - no loss. number of words after copy pasting pdf into word: 8373... after converting with flitz: 8378
+- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. 
+    - The model that I was trying to use: shibing624/text2vec-base-chinese was not available somehow. I now use another model, see information below. 
 
 ## model
 
