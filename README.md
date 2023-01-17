@@ -2,15 +2,19 @@
 
 ## status updates
 
+[alternative_finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/alternative_finding_noisepollution.ipynb) is currently the most promosing notebook. It uses a simple regex that splits the text on 。 and ：. even though many of the columns in the original pdf look very large, most of them only contain one sentence. Some of the bigger parts may be split up. However, if they are about noise pollution the model should be able to find them and place them close to each other again. 
+
+If we need text to remain in the same order in order for GPT to write a proper chronological summary we can consider adding an column to the database that assigns a sentence number to each piece of text based on their original position in the text. This may be difficult, but we can see what happens. 
+
 I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
-it appears to work: see finding_noisepollution. 
 
 ## todo
 
 - read and highlight the actual pdf and see if the model gets it right
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
 - determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
+- see if I can assign a column to the df that shows a certain piece of text's sentence number in the original document. (this may be tricky). 
 
 ### done 
 
