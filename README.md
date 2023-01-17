@@ -1,5 +1,7 @@
 # Wind_project
 
+## status updates
+
 I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
 it appears to work: see finding_noisepollution. 
@@ -10,14 +12,18 @@ it appears to work: see finding_noisepollution.
 - count the total number of words after converting and check how many was lost.
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
 
-This is the main one: https://github.com/Jasper-Hewitt/Wind_project/blob/main/similarity_shibing624.ipynb. It appears to be working pretty well
+## model
 
-There's also one that uses distilbert: but it doesn't show a score. 
+The models below all read Chinese. it looks like the first one was only fine-tuned on simplified Chinese, whereas the second one was also fine-tuned on traditional Chinese. See https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models and the corresponding Hugging Face pages for more information. 
 
-it also works with entire paragraphs. However it makes one crucial mistake because it assigns 0.000 overall similarity score to a sentence that contains all the keywords. Maybe this is just because of a mistake in teh calculation part. Have to verify that
+We currently use: distiluse-base-multilingual-cased-v1.
+
+alternative model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (appears to be the most popular, compare results). 
+
+There are a few other models like ('shibing624/text2vec-base-chinese') that appear to have good performance, but I have trouble importing them.  
 
 
-## note on data
+## converting the data
 I found that the Fitz package appears to work well enough to convert most of the pdf to text. However, it is unable to read some of the scanned in documents on the first few pages of the PDF. I haven't tried to see if it works on all the pages with the pictures.
 
 ```import fitz
