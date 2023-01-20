@@ -11,13 +11,15 @@ I'm currently testing the code on 16 pages that I dragged from the original pdf.
 
 ## todo
 
-- read and highlight the actual pdf and see if the model gets it right
+
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
 - determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
 - see if I can assign a column to the df that shows a certain piece of text's sentence number in the original document. (this may be tricky). 
 
 ### done 
 
+- read and highlight the actual pdf and see if the model gets it right
+    - see [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/highlights_dragged_130_146.pdf) for a version of the PDF that highlighted all the parts that have something to do with 噪音
 - count the total number of words after converting and check how many was lost.
     - no loss. number of words after copy pasting pdf into word: 8373... after converting with flitz: 8378
 - figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. 
