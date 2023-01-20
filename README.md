@@ -2,11 +2,18 @@
 
 ## status updates
 
-[alternative_finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/alternative_finding_noisepollution.ipynb) is currently the most promosing notebook. It uses a simple regex that splits the text on 。 and ：. even though many of the columns in the original pdf look very large, most of them only contain one sentence. Some of the bigger parts may be split up. However, if they are about noise pollution the model should be able to find them and place them close to each other again. 
+[alternative_finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/alternative_finding_noisepollution.ipynb) is currently the most promosing notebook. I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
+
+The model is very good at detecting the sentences that have something to do with 噪音. I read and highlighted the document and looked up their position in the df after the sentiment search. In [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/verified_dragged_130_146.pdf) I analysed pages 130 to 146, highlighted all the parts that had something to do with 噪音, and wrote down what score our model gave to all the highlighted parts. 
+
+sentences with a direct relation came in on the indexes: 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11
+
+Indirect vaguely related to construction and its impact on the fish (but not necessarily about noise pollution)
+18, 19, 22, 23, 51
+
 
 If we need text to remain in the same order in order for GPT to write a proper chronological summary we can consider adding an column to the database that assigns a sentence number to each piece of text based on their original position in the text. If we find out that two sentences that are related to 噪音 have consecutive sentence numbers, for example, sentence 50 and 51 both score a really high overall_score, we can then merge these two sentences back together. That way GPT might find it easier to write a proper summary. 
-
-I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
 
 ## todo
