@@ -31,7 +31,9 @@ The models below all read Chinese. it looks like the first one was only fine-tun
 
 We currently use: distiluse-base-multilingual-cased-v1.
 
-alternative model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (appears to be the most popular, compare results). 
+alternative model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (appears to be the most popular, compare results).
+
+other option (slightly better performance): https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2 
 
 There are a few other models like ('shibing624/text2vec-base-chinese') that appear to have good performance, but I have trouble importing them.  
 
