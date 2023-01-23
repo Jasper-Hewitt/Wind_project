@@ -23,6 +23,8 @@ If we need text to remain in the same order in order for GPT to write a proper c
 ## todo
 
 
+- try the same thing with other pages that are more difficult to convert from pdf to text and see how it goes.
+- try to ask it in some different ways or ask a second question that inputs the summary in order to make it more accessible. 
 - check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
 - determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
 
