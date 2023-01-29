@@ -14,10 +14,7 @@ sentences with a direct relation came in on the indexes:
 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11
 
 Sentences with loose and vague reference to construction its impact on sealife (but not necessarily about noise pollution):
-18, 19, 22, 23, 51
-
-
-If we need text to remain in the same order in order for GPT to write a proper chronological summary we can consider adding an column to the database that assigns a sentence number to each piece of text based on their original position in the text. If we find out that two sentences that are related to 噪音 have consecutive sentence numbers, for example, sentence 50 and 51 both score a really high overall_score, we can then merge these two sentences back together. That way GPT might find it easier to write a proper summary. 
+18, 19, 22, 23, 51 
 
 
 ## todo
