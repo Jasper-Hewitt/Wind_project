@@ -8,12 +8,12 @@ The summary that chatGPT made is: 結： 本計畫關於噪音的規格已改變
 
 the prompt that I gave it is: 幫我寫總結之下的內容，強調關於噪音的規格的改變，請你使用比較簡單的語言，小孩子也可以看得懂。
 
-The model is very good at detecting the sentences that have something to do with 噪音. I read and highlighted the document and looked up their position in the df after the sentiment search. In [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/verified_dragged_130_146.pdf) I analysed pages 130 to 146, highlighted all the parts that had something to do with 噪音, and wrote down what score our model gave to all the highlighted parts. 
+The model is very good at detecting the sentences that have something to do with 噪音. I read and highlighted the document and looked up their position in the df after the sentiment search. In [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/verified_dragged_130_146.pdf) I manually analysed pages 130 to 146, highlighted all the parts that had something to do with 噪音, and wrote down what score our model gave to all the highlighted parts. 
 
 sentences with a direct relation came in on the indexes: 
 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11
 
-Indirect vaguely related to construction and its impact on the fish (but not necessarily about noise pollution)
+Sentences with loose and vague reference to construction its impact on sealife (but not necessarily about noise pollution):
 18, 19, 22, 23, 51
 
 
@@ -23,20 +23,9 @@ If we need text to remain in the same order in order for GPT to write a proper c
 ## todo
 
 
+- determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
 - try the same thing with other pages that are more difficult to convert from pdf to text and see how it goes.
 - try to ask it in some different ways or ask a second question that inputs the summary in order to make it more accessible. 
-- check why the len of sentence_score is only half of that of split_contents. Maybe I'm losing a lot of sentences here. 
-- determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
-
-### done 
-
-- read and highlight the actual pdf and see if the model gets it right
-    - see [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/highlights_dragged_130_146.pdf) for a version of the PDF that highlighted all the parts that have something to do with 噪音
-- count the total number of words after converting and check how many was lost.
-    - no loss. number of words after copy pasting pdf into word: 8373... after converting with flitz: 8378
-- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. 
-    - The model that I was trying to use: shibing624/text2vec-base-chinese was not available somehow. I now use another model, see information below. 
-    - see if I can assign a column to the df that shows a certain piece of text's sentence number in the original document. (this may be tricky). 
 
 ## model
 
@@ -69,3 +58,15 @@ code is based on: https://www.sbert.net/examples/applications/semantic-search/RE
 For semantic research using open AI API, see: 
 
 see also: https://www.youtube.com/watch?v=ocxq84ocYi0 
+
+
+
+### previous steps 
+
+- read and highlight the actual pdf and see if the model gets it right
+    - see [this document](https://github.com/Jasper-Hewitt/Wind_project/blob/main/data/highlights_dragged_130_146.pdf) for a version of the PDF that highlighted all the parts that have something to do with 噪音
+- count the total number of words after converting and check how many was lost.
+    - no loss. number of words after copy pasting pdf into word: 8373... after converting with flitz: 8378
+- figure out what that warning is: cannot find model with this name... Maybe it's not really using the model now. Otherwise check for other models. 
+    - The model that I was trying to use: shibing624/text2vec-base-chinese was not available somehow. I now use another model, see information below. 
+    - see if I can assign a column to the df that shows a certain piece of text's sentence number in the original document. (this may be tricky). 
