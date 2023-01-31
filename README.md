@@ -23,6 +23,7 @@ Sentences with loose and vague reference to construction its impact on sealife (
 - determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
 - try the same thing with other pages that are more difficult to convert from pdf to text and see how it goes.
 - try to ask it in some different ways or ask a second question that inputs the summary in order to make it more accessible. 
+- try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
 
 ## model
 
