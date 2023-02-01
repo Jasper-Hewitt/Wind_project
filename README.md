@@ -4,13 +4,16 @@
 
 - try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
 
+
 - fix the maximum number of tokens, 
 - make chatgpt 補充 its answer with the rest of the sentences!
 
 - try owens dynamic treshold, make sentiment search check the summary. 
 -try to query the transformer with the questions directly, see what happens!
 
+mom_queries1 uses 鯨豚, 噪音, and 保育 as keywords and asks the direct questions to chat gpt.
 
+mom_queries2 asks the questions directly to sbert, and then asks them again to chat gpt.
 
 [finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/finding_noisepollution.ipynb) is the main notebook. I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
