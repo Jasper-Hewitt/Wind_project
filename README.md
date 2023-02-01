@@ -2,6 +2,16 @@
 
 ## status updates
 
+- try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
+
+- fix the maximum number of tokens, 
+- make chatgpt 補充 its answer with the rest of the sentences!
+
+- try owens dynamic treshold, make sentiment search check the summary. 
+-try to query the transformer with the questions directly, see what happens!
+
+
+
 [finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/finding_noisepollution.ipynb) is the main notebook. I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
 The summary that chatGPT made is: 結： 本計畫關於噪音的規格已改變，不再使用聲音驅離裝置(ADD)，水下噪音監測的目的決定了打樁工程應採緩啟動(softstart)持續至少30分鐘，並在施工期間於距離打樁位置外750公尺處選擇合理方式來監控噪音水平，以確保噪音不會達到極端高值，達到環境保護。
@@ -23,7 +33,6 @@ Sentences with loose and vague reference to construction its impact on sealife (
 - determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
 - try the same thing with other pages that are more difficult to convert from pdf to text and see how it goes.
 - try to ask it in some different ways or ask a second question that inputs the summary in order to make it more accessible. 
-- try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
 
 ## model
 
