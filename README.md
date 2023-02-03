@@ -47,10 +47,10 @@ new_df = df.iloc[index:]
 # Drop the last few rows from the original dataframe
 df = df.iloc[:index]
 ```
-    
+
 ### alternative outputs
 
-mom_queries1 uses 鯨豚, 噪音, and 保育 as keywords and asks the direct questions to chat gpt.
+[mom_327_queries1.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom_327_queries1.ipynb): uses 鯨豚, 噪音, and 保育 as keywords （all keywords at once） and asks the direct questions to chat gpt.
 
 output: 
     
@@ -70,7 +70,7 @@ output:
         2. 劉委員希平
         3. 經濟部能源局
 
-mom_queries2 asks the questions directly to sbert, and then asks them again to chat gpt.
+[mom_327_queries2.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom_327_queries2.ipynb) asks the questions directly to sbert （all three at once）, and then asks them again to ChatGPT.
 
 output: 
 
@@ -99,6 +99,7 @@ output:
         5. 劉委員小如參與者
         6.
 
+## older updates
 
 [finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/finding_noisepollution.ipynb) is the main notebook. I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
@@ -114,14 +115,6 @@ sentences with a direct relation came in on the indexes:
 Sentences with loose and vague reference to construction its impact on sealife (but not necessarily about noise pollution):
 18, 19, 22, 23, 51 
 
-
-## todo
-
-
-- determine a threshold. What overal_score is high enough to assume this sentence has something to do with 噪音.
-- try the same thing with other pages that are more difficult to convert from pdf to text and see how it goes.
-- try to ask it in some different ways or ask a second question that inputs the summary in order to make it more accessible. 
-
 ## model
 
 The models below all read Chinese. it looks like the first one was only fine-tuned on simplified Chinese, whereas the second one was also fine-tuned on traditional Chinese. See https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models and the corresponding Hugging Face pages for more information. 
@@ -131,21 +124,7 @@ We currently use: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2.
 other option (slightly better performance): https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2 
 
 There are a few other models like ('shibing624/text2vec-base-chinese') that appear to have good performance, but I have trouble importing them.  
-
-## converting the data
-I found that the Fitz package appears to work well enough to convert most of the pdf to text. However, it is unable to read some of the scanned documents on the first few pages of the PDF. I haven't tried to see if it works on all the pages with the pictures.
-
-```import fitz
-
-doc = fitz.open("small_version2.pdf")
-
-for page in doc:
-    text = page.get_text("text")
-    with open("output3.txt", "a") as f:
-        f.write(text)
-```
-
-     
+ 
 
 ## links and references
 code is based on: https://www.sbert.net/examples/applications/semantic-search/README.html
