@@ -4,12 +4,51 @@
 
 - try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
 
+answers from [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
 
-- fix the maximum number of tokens, 
-- make chatgpt 補充 its answer with the rest of the sentences!
+        第327次會議是什麼時候？ 
+        第327次會議是107年2月9日（星期五）下午4時30分。
 
-- try owens dynamic treshold, make sentiment search check the summary. 
--try to query the transformer with the questions directly, see what happens!
+
+        第327次會議中，對於鯨豚保育的重點是什麼？」 
+        答：第327次會議中，對於鯨豚保育的重點是加強監督開發單位對鯨豚之觀測；確定每年30趟鯨豚調查作業；
+        施工船上設有至少3位以上鯨豚觀測員（其中至少1位為民間生態團體成員）；
+        納入緩衝帶規劃，而基座位址距離中華白海豚野生動物重要棲息環境1,000公尺以上；
+        就施工前使用聲音驅趕裝置，暫時驅趕中華白海豚族群等保育類野生動物之規劃，暫緩採用；使用管架式(Jacket)基礎，納入鯨豚減輕對策；
+        施工前應先確認至少30分鐘無鯨豚活動後方得作業；施工過程若周界750公尺內有海
+
+
+        第327次會議中，有哪些專家為鯨豚保育發言？維持如何？請再確認  」
+        答覆會議上發言的專家包括劉委員希平、劉委員小如意、鄭委員明修。
+
+Notes on [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
+- I adopt a new one-by-one approach. Instead of inserting all three questions in the Sbert query at once, I query Sbert one question 
+at a time. This leads to better search results that ChatGPT can then use to answer the question.
+- As Owen suggested, I no longer query Sbert with keywords but directly insert the question. I then ask ChatGPT the same question.
+- dynamic treshold: We were thinking about using Sbert to assess ChatGPT's output and adjust the threshold accordingly. However,
+I think we will still run into the same problem as before, what tensor is high enough to accept? I therefore came up with an 
+alternative approach. The code below basically selects the maximum number of sentences that Chatgpt accepts (4000 tokens = ~1750 
+characters). This way we can assume that the answer should be within the prompt we give ChatGPT and leave it to ChatGPT to filter out 
+the answer. 
+    
+```
+# Find the number of characters in each row of the text column
+df['text_length'] = df['text'].str.len()
+
+# Get the cumulative sum of the text lengths
+df['cumulative_length'] = df['text_length'].cumsum()
+
+# Find the index of the first row in which the cumulative length is greater than 3600
+index = df.index[df['cumulative_length'] > 1500][0]
+
+# Create a new dataframe with only the last few rows
+new_df = df.iloc[index:]
+
+# Drop the last few rows from the original dataframe
+df = df.iloc[:index]
+```
+    
+### alternative outputs
 
 mom_queries1 uses 鯨豚, 噪音, and 保育 as keywords and asks the direct questions to chat gpt.
 
