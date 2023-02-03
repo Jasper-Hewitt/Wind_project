@@ -50,6 +50,11 @@ new_df = df.iloc[index:]
 df = df.iloc[:index]
 ```
 
+### todo
+- re-insert the answers into chatGPT and ask it to summarize the answers into one cohesive summary.
+- read article on judging GPT summaries (dashboard).
+- play around with different prompts, see if results get any better.
+
 **optional adjustments:** 
 - try to drop "第327次會議中" from the last two questions and see what the results are. 
 - use different queries for Sbert
