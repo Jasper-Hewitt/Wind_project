@@ -30,6 +30,8 @@ I think we will still run into the same problem as before, what tensor is high e
 alternative approach. The code below basically selects the maximum number of sentences that Chatgpt accepts (4000 tokens = ~1750 
 characters). This way we can assume that the answer should be within the prompt we give ChatGPT and leave it to ChatGPT to filter out 
 the answer. 
+- it is important to remember that ChatGPT's output is different everytime you prompt it. The quality of the output varies
+significantly between answers. 
     
 ```
 # Find the number of characters in each row of the text column
@@ -47,6 +49,10 @@ new_df = df.iloc[index:]
 # Drop the last few rows from the original dataframe
 df = df.iloc[:index]
 ```
+
+**optional adjustments:** 
+- try to drop "第327次會議中" from the last two questions and see what the results are. 
+- use different queries for Sbert
 
 ### alternative outputs
 
