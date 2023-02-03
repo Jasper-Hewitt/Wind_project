@@ -53,6 +53,7 @@ df = df.iloc[:index]
 ### todo
 - re-insert the answers into chatGPT and ask it to summarize the answers into one cohesive summary.
 - read article on judging GPT summaries (dashboard).
+- check the gitignore thing https://git-scm.com/docs/gitignore 
 - play around with different prompts, see if results get any better.
 
 **optional adjustments:** 
