@@ -73,7 +73,14 @@ df = df.iloc[:index]
 ```
 
 ### todo
-- re-insert the answers into chatGPT and ask it to summarize the answers into one cohesive summary.
+- DETERMINE THRESHOLD? (important because GPT sometimes makes stuff up when the answer is not there)
+
+     - last sentence with 鯨豚, 海豚, or 噪音 ？ 
+        
+     - come up with arbritrary number? remember it would have to differ per number of queries
+        
+     - evaluate output with sbert again? this would also run in to same threshold problem...
+        
 - read article on judging GPT summaries (dashboard).
 - check the gitignore thing https://git-scm.com/docs/gitignore 
 - play around with different prompts, see if results get any better.
