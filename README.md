@@ -21,6 +21,16 @@ answers from [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_projec
         第327次會議中，有哪些專家為鯨豚保育發言？維持如何？請再確認  」
         答覆會議上發言的專家包括劉委員希平、劉委員小如意、鄭委員明修。
 
+output after asking ChatGPT to summarize the answers in one piece of text:
+        
+         劉委員希平、劉委員小如意、鄭委員明修將出席107年2月9日（星期五）下午4時30分舉行的第327次會議，
+         討論與鯨豚保育有關的重點議題，包括：加強監督開發單位對鯨豚之觀測；確定每年30趟鯨豚調查作業；
+         施工船上設有至少3位以上鯨豚觀測員（其中至少1位為民間生態團體成員）；
+         納入緩衝帶規劃，而基座位址距離中華白海豚野生動物重要棲息環境1,000公尺以上；
+         就施工前使用聲音驅趕裝置，暫時驅趕中華白海豚族群等野生動物之規劃，暫緩採用；
+         使用管架式(Jacket)基礎，納入鯨豚減輕對策；施工前應先確認至少30分鐘無鯨豚活動後方得作業；施工過程若周界750公尺內有海。
+        
+
 Notes on [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
 - I adopt a new one-by-one approach. Instead of inserting all three questions in the Sbert query at once, I query Sbert one question 
 at a time. This leads to better search results that ChatGPT can then use to answer the question.
