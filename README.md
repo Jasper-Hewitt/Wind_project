@@ -4,7 +4,42 @@
 
 - try the query the answer for questions: (0)第327次會議是什麼時候？(1) 第327次會議中，對於鯨豚保育的重點是什麼？(2) 第327次會議中，有哪些專家為鯨豚保育發言？
 
-answers from [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
+final results from (summary of Q&A)[mom324](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom324.ipynb):
+
+        '總結：第324次會議於107年1月17日（星期三）下午2時0分開始，
+        為中華白海豚保育提出了多項措施，包括施工前使用聲音驅趕裝置，風機位置需距離野生動物1,000公尺以上，
+        退縮風場至4.2公里、水深37公尺以上，於禁區邊界設置水下聲學監測設施，配備觀察船及鯨豚生態觀察員，
+        以及提出減噪措施如水下氣泡幕、帷幕，每年調查頻率需至少為30次，考量邀民間團體具鯨豚觀測能力人員 
+        共同參與等環境及生態保育相關施加措施，專家有公部門的農業處研究專家、環境影響評估書件專家、彰化縣政府（農業處）研究專家、
+        行政院農業委員會專家、王委員文誠專家等，仍懇請臺中市政府
+        環境保護局歸還函上簽章確認。'
+
+Q&A from [mom324](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom324.ipynb):
+
+        第324次會議是什麼時候？
+        ，但仍懇請臺中市政府環境保護局歸還函上簽章確認之 」第324次會議是107年1月17日（星期三）下午2時0分。
+
+        第324次會議中，對於鯨豚保育的重點是什麼？  
+        第324次會議中，對於鯨豚保育的重點是避免對中華白海豚野生動物的衝擊，
+        包括：施工前使用聲音驅趕裝置暫時驅趕野生動物，風機位置需距離中華白海豚野生動物重要棲息環境（含預告）1,000 公尺以上，
+        開發單位承諾退縮風場至距離中華白海豚重要棲息環境至少 4.2 公里、水深大於 37 公尺（TWVD2001 為基準）區域，
+        於禁區邊界 4 個方位設置水下聲學監測設施，配備觀察船及配置鯨豚生態觀察員，於環境影響評估內容中，
+        呈現最保守情境再加上極端氣候之最壞情境下評估，以及船隻船速管制在 6 節以下，且儘可能避免在中華白海豚活動高峰時間進入已知之中華
+        白海豚活動密集位置，航道劃設也應避開敏感區位。
+        
+        第324次會議中，有哪些專家為鯨豚保育發言？
+        ，提出全程使用減噪措施如水下氣泡幕、水下帷幕或施工時已商業化之「最佳」水下噪音防制工法，
+        以及施工營運階段鯨豚生態調查頻率應採每年 30 趟次（非僅限於 4~9 月執行，
+        調整前應依法申請變更），建議強化鯨豚觀測員訓練作業，
+        並考量邀民間團體具鯨豚觀測能力人員共同參與等環境及生態保育相關施加措施。
+        第324次會議中，為鯨豚保育發言的專家有：
+        1. 公部門的農業處研究專家、2.環境影響評估書件專家、
+        3.彰化縣政府（農業處）研究專家、4.行政院農業委員會專家、5.王委員文誠專家等。
+
+
+
+
+results from [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
 
         第327次會議是什麼時候？ 
         第327次會議是107年2月9日（星期五）下午4時30分。
@@ -21,7 +56,7 @@ answers from [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_projec
         第327次會議中，有哪些專家為鯨豚保育發言？維持如何？請再確認  」
         答覆會議上發言的專家包括劉委員希平、劉委員小如意、鄭委員明修。
 
-output after asking ChatGPT to summarize the answers in one piece of text:
+output after asking GPT3 to summarize the answers in one piece of text:
         
          劉委員希平、劉委員小如意、鄭委員明修將出席107年2月9日（星期五）下午4時30分舉行的第327次會議，
          討論與鯨豚保育有關的重點議題，包括：加強監督開發單位對鯨豚之觀測；確定每年30趟鯨豚調查作業；
@@ -45,14 +80,14 @@ alternative output (regenerated)
 
 Notes on [1_by_1_mom_327.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/1_by_1_mom_327.ipynb):
 - I adopt a new one-by-one approach. Instead of inserting all three questions in the Sbert query at once, I query Sbert one question 
-at a time. This leads to better search results that ChatGPT can then use to answer the question.
-- As Owen suggested, I no longer query Sbert with keywords but directly insert the question. I then ask ChatGPT the same question.
-- dynamic treshold: We were thinking about using Sbert to assess ChatGPT's output and adjust the threshold accordingly. However,
+at a time. This leads to better search results that GPT3 can then use to answer the question.
+- As Owen suggested, I no longer query Sbert with keywords but directly insert the question. I then ask GPT3 the same question.
+- dynamic treshold: We were thinking about using Sbert to assess GPT3's output and adjust the threshold accordingly. However,
 I think we will still run into the same problem as before, what tensor is high enough to accept? I therefore came up with an 
-alternative approach. The code below basically selects the maximum number of sentences that Chatgpt accepts (4000 tokens = ~1750 
-characters). This way we can assume that the answer should be within the prompt we give ChatGPT and leave it to ChatGPT to filter out 
+alternative approach. The code below basically selects the maximum number of sentences that GPT3 accepts (4000 tokens = ~1750 
+characters). This way we can assume that the answer should be within the prompt we give GPT3 and leave it to GPT to filter out 
 the answer. 
-- it is important to remember that ChatGPT's output is different everytime you prompt it. The quality of the output varies
+- it is important to remember that GPT's output is different everytime you prompt it. The quality of the output varies
 significantly between answers. 
     
 ```
@@ -111,7 +146,7 @@ output:
         2. 劉委員希平
         3. 經濟部能源局
 
-[mom_327_queries2.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom_327_queries2.ipynb) asks the questions directly to sbert （all three at once）, and then asks them again to ChatGPT.
+[mom_327_queries2.ipynb](https://github.com/Jasper-Hewitt/Wind_project/blob/main/mom_327_queries2.ipynb) asks the questions directly to sbert （all three at once）, and then asks them again to GPT3.
 
 output: 
 
@@ -144,7 +179,7 @@ output:
 
 [finding_noisepollution](https://github.com/Jasper-Hewitt/Wind_project/blob/main/finding_noisepollution.ipynb) is the main notebook. I'm currently testing the code on 16 pages that I dragged from the original pdf. I took the pages 130 to 146. 
 
-The summary that chatGPT made is: 結： 本計畫關於噪音的規格已改變，不再使用聲音驅離裝置(ADD)，水下噪音監測的目的決定了打樁工程應採緩啟動(softstart)持續至少30分鐘，並在施工期間於距離打樁位置外750公尺處選擇合理方式來監控噪音水平，以確保噪音不會達到極端高值，達到環境保護。
+The summary that GPT made is: 結： 本計畫關於噪音的規格已改變，不再使用聲音驅離裝置(ADD)，水下噪音監測的目的決定了打樁工程應採緩啟動(softstart)持續至少30分鐘，並在施工期間於距離打樁位置外750公尺處選擇合理方式來監控噪音水平，以確保噪音不會達到極端高值，達到環境保護。
 
 the prompt that I gave it is: 幫我寫總結之下的內容，強調關於噪音的規格的改變，請你使用比較簡單的語言，小孩子也可以看得懂。
 
